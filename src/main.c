@@ -3,21 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: achanek <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: achanek <achanek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:36:53 by achanek           #+#    #+#             */
-/*   Updated: 2025/04/28 11:40:13 by achanek          ###   ########.fr       */
+/*   Updated: 2025/04/29 10:59:09 by achanek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/minishell.h"
 
-int main(int ac,char **av,char **envp)
+#include "../includes/minishell.h"
+#include <readline/readline.h>
+#include <readline/history.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int ac, char **av, char **envp)
 {
 	(void)ac;
 	(void)av;
+	(void)envp;
+
+	char *input;
+
 	while (1)
 	{
-
+		input = readline("minishell$ ");
+		if (!input)
+		{
+			printf("exit\n");
+			break;
+		}
+		if (*input)
+		add_history(input);
+		printf("You typed: %s\n", input);
+		free(input);
 	}
+	return 0;
 }
