@@ -6,16 +6,13 @@
 /*   By: achanek <achanek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:36:53 by achanek           #+#    #+#             */
-/*   Updated: 2025/04/29 10:59:09 by achanek          ###   ########.fr       */
+/*   Updated: 2025/04/30 11:51:39 by achanek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../includes/minishell.h"
-#include <readline/readline.h>
-#include <readline/history.h>
-#include <stdio.h>
-#include <stdlib.h>
+
 
 int main(int ac, char **av, char **envp)
 {
