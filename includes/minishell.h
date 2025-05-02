@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: achanek <achanek@student.42.fr>            +#+  +:+       +#+        */
+/*   By: kel-bahr <kel-bahr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 11:51:49 by achanek           #+#    #+#             */
-/*   Updated: 2025/04/30 11:52:36 by achanek          ###   ########.fr       */
+/*   Updated: 2025/04/30 14:21:00 by kel-bahr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,7 @@
 #include <readline/history.h>
 #include <stdio.h>
 #include <stdlib.h>
+
+int ft_cont_word(char *str);
 
 #endif

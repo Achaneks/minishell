@@ -1,16 +1,16 @@
 NAME = minishell
 
-SRC = src/main.c
+SRC = src/main.c src/ft_split.c
 
 OBJ = $(SRC:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Iincludes -lreadline
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -lreadline
 
 clean:
 	rm -f $(OBJ)
