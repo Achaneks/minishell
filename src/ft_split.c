@@ -15,7 +15,7 @@
 int ft_cont_word(char *str)
 {
 	int i = 0, count = 0;
-	
+
 	while (str[i] && str[i] == ' ')
 		i++;
 	if (str[i] != ' ' && str[i])
@@ -46,7 +46,7 @@ int ft_cont_word(char *str)
 		}
 		while (str[i] && str[i] == ' ' && str[i] != '"' && str[i] != '\'')
 			i++;
-		if (str[i] != ' ' && str[i])
+		if (str[i] != ' ' && str[i - 1] == ' ' &&str[i])
 			count++;
 	}
 	return(count);
@@ -55,6 +55,6 @@ int ft_cont_word(char *str)
 // char **split(char *str)
 // {
 // 	char **line;
-	
+
 // 	line = malloc (ft_cont_word(str) + 1);
 // }
