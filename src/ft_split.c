@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: khalidelbahry <khalidelbahry@student.42    +#+  +:+       +#+        */
+/*   By: achanek <achanek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 14:38:57 by kel-bahr          #+#    #+#             */
-/*   Updated: 2025/05/03 16:31:01 by khalidelbah      ###   ########.fr       */
+/*   Updated: 2025/05/04 09:04:55 by achanek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int ft_cont_word(char *str)
 {
 	int i = 0, count = 0;
-	
+
 	while (str[i] && str[i] == ' ')
 		i++;
 	if (str[i] != ' ' && str[i])
@@ -52,10 +52,10 @@ int ft_cont_word(char *str)
 	return(count);
 }
 
-char **split(char *str)
-{
-	char **line;
-	
-	line = malloc (ft_cont_word(str) + 1);
-	 
-}
+// char **split(char *str)
+// {
+// 	char **line;
+
+// 	line = malloc (ft_cont_word(str) + 1);
+
+// }
