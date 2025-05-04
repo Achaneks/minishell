@@ -6,7 +6,7 @@
 /*   By: achanek <achanek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 10:20:42 by achanek           #+#    #+#             */
-/*   Updated: 2025/05/04 10:50:50 by achanek          ###   ########.fr       */
+/*   Updated: 2025/05/04 11:54:24 by achanek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,6 @@ int check_couts(char *str)
 		i++;
 	}
 	if (single_quote || double_quote)
-		return ((printf("error invalid input")), 1);
+		return ((printf("error invalid input\n")), 1);
 	return (0);
 }
