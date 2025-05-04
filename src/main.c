@@ -13,6 +13,13 @@
 
 #include "../includes/minishell.h"
 
+void ft_free(char **str)
+{
+	int i = 0;
+	while (str[i])
+		free(str[++i]);
+	free(str);
+}
 
 int main(int ac, char **av, char **envp)
 {
@@ -21,7 +28,8 @@ int main(int ac, char **av, char **envp)
 	(void)envp;
 
 	char *input;
-
+	char **line;
+	int i = 0;
 	while (1)
 	{
 		input = readline("minishell$ ");
@@ -33,7 +41,14 @@ int main(int ac, char **av, char **envp)
 		if (*input)
 		add_history(input);
 		printf("You typed: %s\n", input);
-		printf("%d\n", ft_cont_word(input));
+		line  = split(input);
+		while (line[i])
+		{
+			printf("%s\n", line[i]);
+			i++;
+		}
+		ft_free(line);
+		i = 0;
 		free(input);
 	}
 	return 0;

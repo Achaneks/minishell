@@ -19,5 +19,5 @@
 #include <stdlib.h>
 
 int ft_cont_word(char *str);
-
+char **split(char *str);
 #endif
