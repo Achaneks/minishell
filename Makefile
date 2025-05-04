@@ -1,6 +1,6 @@
 NAME = minishell
 
-SRC = src/main.c src/ft_split.c
+SRC = src/main.c src/parser/check_couts.c src/parser/split.c
 
 OBJ = $(SRC:.c=.o)
 

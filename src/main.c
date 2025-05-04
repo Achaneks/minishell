@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kel-bahr <kel-bahr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: achanek <achanek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:36:53 by achanek           #+#    #+#             */
-/*   Updated: 2025/04/30 14:34:27 by kel-bahr         ###   ########.fr       */
+/*   Updated: 2025/05/04 11:53:52 by achanek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int main(int ac, char **av, char **envp)
 	(void)envp;
 
 	char *input;
-
+	char **str;
+	int i = 0;
 	while (1)
 	{
 		input = readline("minishell$ ");
@@ -31,10 +32,18 @@ int main(int ac, char **av, char **envp)
 			break;
 		}
 		if (*input)
-		add_history(input);
-		printf("You typed: %s\n", input);
-		printf("%d\n", ft_cont_word(input));
+			add_history(input);
+		if (!check_couts(input))
+		{
+			str  = split(input);
+			while(str[i])
+			{
+				printf("%s\n", str[i]);
+				i++;
+			}
+		}
 		free(input);
+		i = 0;
 	}
 	return 0;
 }
