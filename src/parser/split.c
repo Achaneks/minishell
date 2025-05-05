@@ -6,7 +6,7 @@
 /*   By: achanek <achanek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 11:32:36 by achanek           #+#    #+#             */
-/*   Updated: 2025/05/04 11:39:16 by achanek          ###   ########.fr       */
+/*   Updated: 2025/05/05 11:24:27 by achanek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,25 +74,6 @@ static void	str_free(char **str, int i)
 		j++;
 	}
 	free(str);
-}
-
-char	*ft_strdup(const char *s)
-{
-	int		i;
-	char	*p;
-
-	i = ft_strlen(s);
-	p = (char *)malloc((i + 1) * sizeof(char));
-	if (!p)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		p[i] = s[i];
-		i++;
-	}
-	p[i] = '\0';
-	return (p);
 }
 
 static void	find_next_substr(const char *s, int *start, int *end)
